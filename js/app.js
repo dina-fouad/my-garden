@@ -10,13 +10,17 @@ const table = document.getElementById('table');
 
 function Flowers (name , img , season ){
   this.name = name;
-  this.img = `./img/${img}.jpeg`;
+  this.img = `${img}`;
   this.season=season;
   Flowers.all.push(this);
 }
 
 
+
 Flowers.all = [];
+
+
+
 
 form.addEventListener('submit', getFlower);
 
