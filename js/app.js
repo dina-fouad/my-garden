@@ -10,7 +10,7 @@ const table = document.getElementById('table');
 
 function Flowers (name , img , season ){
   this.name = name;
-  this.img = `./img/${name}.jpeg`;
+  this.img = `./img/${img}.jpeg`;
   this.season=season;
   Flowers.all.push(this);
 }
@@ -76,12 +76,15 @@ function render (){
 
 
 function saveData() {
-  JSON.stringify(Flowers.all);
+
+  let data=JSON.stringify(Flowers.all);
+  localStorage.setItem('Flowers',data);
 }
 
 
 function getDate() {
   JSON.parse(localStorage.getItem('form'));
+
 
 }
 
