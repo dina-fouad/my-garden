@@ -74,7 +74,7 @@ function saveData() {
 
 
 function getDate() {
-  JSON.parse(localStorage.getItem('form'));
+  JSON.parse(localStorage.getItem('table'));
 
 }
 
