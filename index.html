@@ -3,42 +3,49 @@
 <head>
   
     
-    <title>Document</title>
-    <link rel="styeshhet" href="./css/style.css">
+    <title>My Garden</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-<section class="all">
+
 <body>
     <header> 
         <h2>My Fabulous Garden</h2>
     </header>
     <main>
+        <div class="formFlower">
+            <form id = "form">
         <fieldset>
             <legend> New flower</legend>
-        <form id = "form">
+        
             <label for="name">name</label>
             <input type="text" id="name">
             <label for="image">image</label>
 <select  id="image">
-  <option value="Alstroemerias">Alstroemerias</option>
-  <option value="Gardenias">Gardenias</option>
-  <option value="Orchids">Orchids</option>
-  <option value="Roses">Roses</option>
-  <option value="Sunflowers">Sunflowers</option>
-  <option value=" Tulips">Tulips</option>
-  <option value="Peonies">Peonies</option>
-</select>
+   
+                    <option value="./img/Alstroemerias.jpeg">Alstroemerias</option>
+                    <option value="./img/Gardenias.jpeg">Gardenias</option>
+                    <option value="./img/Orchids.jpeg">Orchids</option>
+                    <option value="./img/Peonies.jpeg">Peonies</option>
+                    <option value="./img/Roses.jpeg">Roses</option>
+                    <option value="./img/Sunflowers.jpeg">Sunflowers</option>
+                    <option value="./img/Tulips.jpeg">Tulips</option>
+                </select>
 <label for="season">season</label>
 <input type="text" id="season">
 <button type="submit">save</button>
-        </form>
+       
     </fieldset>
+</form>
+</div>
 
     <table id = "table"></table>
+
     </main>
     <footer>
         <p>all rights reserved &copy;</p>
     </footer>
-</section>
+
     <script src ="./js/app.js"></script>
 </body>
 </html>

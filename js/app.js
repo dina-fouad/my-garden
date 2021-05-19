@@ -27,54 +27,55 @@ function getFlower (event){
 
 
 function render (){
-  form.innerHTML='';
+  table.innerHTML='';
   let head = document.createElement('tr');
   table.appendChild(head);
 
 
-  let thE = document.createElement('th');
-  head.appendChild(thE);
-  thE.textContent= 'image';
+  let th1 = document.createElement('th');
+  head.appendChild(th1);
+  th1.textContent= 'image';
 
-  let th1E = document.createElement('th');
-  head.appendChild(th1E);
-  th1E.textContent= 'name';
+  let th2 = document.createElement('th');
+  head.appendChild(th2);
+  th2.textContent= 'Name';
 
 
-  let th2E = document.createElement('th');
-  head.appendChild(th2E);
-  th2E.textContent= 'season';
+  let th3 = document.createElement('th');
+  head.appendChild(th3);
+  th3.textContent= 'season';
 
 
   for(let i = 0 ; i < Flowers.all.length ; i++){
     let trE = document.createElement('tr');
     table.appendChild(trE);
 
-    let td1E =document.createElement('td');
-    trE.appendChild(td1E);
-    td1E.textContent = `${Flowers.all[i].img}`;
+    let td1 =document.createElement('td');
+    trE.appendChild(td1);
+    td1.src = `${Flowers.all[i].img}`;
 
-    let td2E =document.createElement('td');
-    trE.appendChild(td2E);
-    td2E.textContent = `${Flowers.all[i].name}`;
+    let td2 =document.createElement('td');
+    trE.appendChild(td2);
+    td2.textContent = `${Flowers.all[i].name}`;
 
-    let td3E =document.createElement('td');
-    trE.appendChild(td3E);
-    td3E.textContent = `${Flowers.all[i].season}`;
+    let td3 =document.createElement('td');
+    trE.appendChild(td3);
+    td3.textContent = `${Flowers.all[i].season}`;
   }
 }
 
 
-function saveData(){
-  JSON.stringify(Flowers.all);
+
+
+
+function saveData() {
+  localStorage.setItem('flowerData', JSON.stringify(Flowers.all));
 }
 
 
-
-function getData (){
+function getDate() {
   JSON.parse(localStorage.getItem('form'));
 
-
 }
 
-getData();
+getDate();
