@@ -26,7 +26,7 @@ function getFlower (event){
   let img = event.target.image.value;
   let season = event.target.season.value;
   new Flowers(name , img , season);
- 
+
   render();
   saveData();
 }
@@ -59,7 +59,7 @@ function render (){
 
     let td1 =document.createElement('img');
     trE.appendChild(td1);
-    td1.src = `${Flowers.all[i].img}.jpeg`;
+    td1.src = `${Flowers.all[i].img}`;
 
     let td2 =document.createElement('td');
     trE.appendChild(td2);
@@ -76,7 +76,7 @@ function render (){
 
 
 function saveData() {
-  localStorage.setItem('flowerData', JSON.stringify(Flowers.all));
+  JSON.stringify(Flowers.all);
 }
 
 
