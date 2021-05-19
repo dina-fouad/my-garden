@@ -50,7 +50,7 @@ function render (){
     let trE = document.createElement('tr');
     table.appendChild(trE);
 
-    let td1 =document.createElement('td');
+    let td1 =document.createElement('img');
     trE.appendChild(td1);
     td1.src = `${Flowers.all[i].img}`;
 
